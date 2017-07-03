@@ -8,12 +8,14 @@ import android.os.Bundle;
  *   网络-okhttp
  *   json-GSON
  *   图片-Glide
+ *
+ *   和风天气：key：6fdfb053cfe945dfbe7caa97b1478df3
  * */
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fragment_main);
     }
 }
