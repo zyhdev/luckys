@@ -162,7 +162,7 @@ public class Utility {
     /**
      * 将返回的JSON数据解析程Weather实体类*/
     public static Weather handleWeatherResponse(String response){
-        Log.i("lucky","JSON数据:"+response.toString());
+        // Log.i("lucky","JSON数据:"+response.toString());
         try{
             JSONObject jsonObject = new JSONObject(response);
             JSONArray jsonArray=jsonObject.getJSONArray("HeWeather5");
