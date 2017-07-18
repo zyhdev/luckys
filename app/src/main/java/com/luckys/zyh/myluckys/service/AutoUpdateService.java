@@ -27,6 +27,7 @@ import okhttp3.Response;
 /**
  * Created by v_zhaoyanhu01 on 2017/7/17.
  * 后台服务，主要是时时更新天气
+ * 此服务是基于主进程下存在的，如果主进程被干掉，那么此服务就挂掉了
  */
 
 public class AutoUpdateService extends Service{
@@ -45,8 +46,8 @@ public class AutoUpdateService extends Service{
 //        updateBingPic();
         // 定时
         AlarmManager manager = (AlarmManager)getSystemService(ALARM_SERVICE);
-        //int anHour = 8 * 60 * 60 * 1000;//8个小时的毫秒数
-        int anHour = 5000;
+        int anHour = 8 * 60 * 60 * 1000;//8个小时的毫秒数
+        //int anHour = 5000;
         long triggerAtTime = SystemClock.elapsedRealtime()+anHour;
         Intent i = new Intent(this,AutoUpdateService.class);
         PendingIntent pi = PendingIntent.getService(this,0,i,0);
