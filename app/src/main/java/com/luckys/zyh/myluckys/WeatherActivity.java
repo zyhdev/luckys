@@ -68,11 +68,11 @@ public class WeatherActivity extends AppCompatActivity {
         //背景图和状态栏（显示移动信号，电池，时间,最上层的状态栏）融合
         //5.0才支持的功能
         // 效果时，头布局和系统状态栏紧贴在一起了，借助android:fitsSystemWindows 为系统状态栏留出空间
-//        if(Build.VERSION.SDK_INT >= 21){
-//            View decorView=getWindow().getDecorView();
-//            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN|View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
-//            getWindow().setStatusBarColor(Color.TRANSPARENT);
-//        }
+        if (Build.VERSION.SDK_INT >= 21) {
+            View decorView = getWindow().getDecorView();
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
         setContentView(R.layout.activity_weather);
         // 初始化控件
         weatherLayout = (ScrollView)findViewById(R.id.lucky_weather_scrollview);
